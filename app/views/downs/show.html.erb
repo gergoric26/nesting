@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @down.number %>
+</p>
+
+<%= link_to 'Edit', edit_up_down_path(@down.up, @down) %> |
+<%= link_to 'Back', up_downs_path(@down.up) %> |
+<%= link_to 'Show', [@down.up] %>

@@ -1,0 +1,27 @@
+<h1>Listing downs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @downs.each do |down| %>
+      <tr>
+        <td><%= down.number %></td>
+        <td><%= link_to 'Show', [down.up, down] %></td>
+        <td><%= link_to 'Edit', edit_up_down_path(down.up, down) %></td>
+        <td><%= link_to 'Destroy', [down.up, down], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Down', new_up_down_path %>
